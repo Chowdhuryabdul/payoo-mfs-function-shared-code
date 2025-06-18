@@ -1,13 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>This the homepage of the payoo transaction page</title>
 </head>
+
 <body>
-    
+    <main class="flex justify-center">
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+                <div class="artboard artboard-demo phone-3">
+                    <div class="stats shadow">
+                        <div class="stat">
+                            <div class="stat-title">Total Amount</div>
+                            <div id="existing-balance" class="stat-value">1000</div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div>
+                        <button id="add-money-btn-show" class="btn btn-lg">Add Money</button>
+                        <button id="cash-out-btn-show" class="btn btn-lg">Cash Out</button>
+                        <button id="transaction-history-show-btn" class="btn btn-lg">Transaction History</button>
+                        <button id="bonus-show-btn" class="btn btn-lg">Get Bonus</button>
+                    </div>
+                    <div class="divider"></div>
+
+                    <!-- add money start  -->
+                    <div id="add-money-form" class=" hidden  card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Added Amount</span>
+                                </label>
+                                <input id="adding-amount-input" type="number" placeholder="Added Amount" class="input input-bordered" required autocomplete="off"/>
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin</span>
+                                </label>
+                                <input id="adding-amount-pin" type="password" placeholder="pin" class="input input-bordered" required autocomplete="off" />
+                                <label class="label">
+                                    <a href="#" class="label-text-alt link link-hover">Forgot pin?</a>
+                                </label>
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="add-money-btn" class="btn btn-primary">Add Money</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- add money end  -->
+                     <!-- cash out start  -->
+                      <div id="cashed-out-form" class=" hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Cashed Out Amount</span>
+                                </label>
+                                <input id="cash-out-input" type="number" placeholder="Cashed Out Amount" class="input input-bordered" required autocomplete="off"/>
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin</span>
+                                </label>
+                                <input id="cash-out-pin" type="password" placeholder="pin" class="input input-bordered" required autocomplete="off" />
+                                <label class="label">
+                                    <a href="#" class="label-text-alt link link-hover">Forgot pin?</a>
+                                </label>
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="cash-out-btn" class="btn btn-primary">Cash Out</button>
+                            </div>
+                        </form>
+                    </div>
+                     <!-- cash out end  -->
+                    <!-- transaction history start  -->
+                     <div id="transaction-form" class=" hidden text-center bg-yellow-600">
+                        <h2 class="text-5xl font-bold">Transaction History</h2>
+                        <div id="transactio-container">
+
+                        </div>
+                     </div>
+                    <!-- transaction history end  -->
+                    
+                    <!-- this is the start of bonus part -->
+                     <div id="bonus-form" class=" hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Added Amount</span>
+                                </label>
+                                <input id="adding-amount-input-for-bonus" type="number" placeholder="Added Amount" class="input input-bordered" required autocomplete="off"/>
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin</span>
+                                </label>
+                                <input id="bonus-pin" type="password" placeholder="pin" class="input input-bordered" required autocomplete="off" />
+                                <label class="label">
+                                    <a href="#" class="label-text-alt link link-hover">Forgot pin?</a>
+                                </label>
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="bonus-btn" class="btn btn-primary">Add Money & Get Bonus</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- this is the end of bonus part -->
+                     <!-- this is the kupon part -->
+                      <div id="bonus-form" class=" hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Added Amount</span>
+                                </label>
+                                <input id="adding-amount-input-for-bonus" type="number" placeholder="Added Amount" class="input input-bordered" required autocomplete="off"/>
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin</span>
+                                </label>
+                                <input id="bonus-pin" type="password" placeholder="pin" class="input input-bordered" required autocomplete="off" />
+                                <label class="label">
+                                    <a href="#" class="label-text-alt link link-hover">Forgot pin?</a>
+                                </label>
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="bonus-btn" class="btn btn-primary">Add Money & Get Bonus</button>
+                            </div>
+                        </form>
+                    </div>
+                     <!-- this is the kupon part end -->
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/add-money.js"></script>
+    <script src="js/library.js"></script>
+    <script src="js/cash-out.js"></script>
+    <script src="js/features.js"></script>
+    <script src="js/get-bonus.js"></script>
 </body>
 </html>
